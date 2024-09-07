@@ -60,8 +60,7 @@ const Login = () => {
         })
         .catch((error) => {
           const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMsg(errorCode + "-" + errorMessage);
+          setErrorMsg(errorCode );
         });
     } else {
       signInWithEmailAndPassword(
@@ -75,8 +74,7 @@ const Login = () => {
         })
         .catch((error) => {
           const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMsg(errorCode + "-" + errorMessage);
+          setErrorMsg(errorCode );
         });
     }
   };
@@ -86,7 +84,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute w-screen h-screen">
+      <div className="absolute w-screen object-cover h-screen">
         <img src={BG_LOGO} alt="bg_logo" />
       </div>
       <form
@@ -121,12 +119,12 @@ const Login = () => {
         />
         <p className="text-red-600">{errorMsg}</p>
         <button
-          className="p-3 my-6 bg-red-700 w-full font-medium rounded-lg"
+          className="p-3 my-6 hover:opacity-85 bg-red-700 w-full font-medium rounded-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="py-1 cursor-pointer" onClick={toggleSignInForm}>
+        <p className="py-1 cursor-pointer hover:underline" onClick={toggleSignInForm}>
           {isSignInForm
             ? " New to Netflix? Sign Up Now"
             : "Already registered? Sign In Now"}
