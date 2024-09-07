@@ -8,8 +8,10 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZTc0M2UxNTcyOWQzNGYxNmMzNzViZWQ0MTlhOWY2NCIsIm5iZiI6MTcyNTU0MTM1NS42ODgxNjMsInN1YiI6IjY2ZDlhNWM5MTY1NWRhZTA0MTAxOTNlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.J3NwVxGgb23sFXwI5-Yp7bIXsaIBAyrO5QWjQMhaTQI",
+    Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
+    // eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MDBhNzZjNTFmODNjZWFlN2ZjOGIzMTg5MzRjYjZkMyIsIm5iZiI6MTcyNTc0NjgxMS45ODcwNSwic3ViIjoiNjZkOWE1YzkxNjU1ZGFlMDQxMDE5M2UwIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.0OTpRKH-d7wSKF_jIweFxn-y9cCFTd9VjObHdABPMv0"
   },
 };
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+export const GEMINI_KEY = process.env.REACT_APP_GEMINI_KEY;
