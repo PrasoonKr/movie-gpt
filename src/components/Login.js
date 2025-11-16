@@ -84,8 +84,8 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute w-screen object-cover h-screen">
-        <img src={BG_LOGO} alt="bg_logo" />
+      <div className="absolute ">
+        <img className="h-screen w-screen object-cover"src={BG_LOGO} alt="bg_logo" />
       </div>
       <form
         onSubmit={(e) => {

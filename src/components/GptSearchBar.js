@@ -26,7 +26,7 @@ const GptSearchBar = () => {
       ".only give me names of 5 movies, comma separated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
     //make an api call to api and get movie results
     const genAI = new GoogleGenerativeAI(GEMINI_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
     const prompt = gptQuery;
     try {
       const result = await model.generateContent(prompt);
@@ -34,7 +34,7 @@ const GptSearchBar = () => {
       const promiseArray = gptMovies.map((movie) => searchMovieTmbd(movie));
       //this will give me array of promises
       const tmdbResults = await Promise.all(promiseArray);
-      console.log(tmdbResults);
+      //console.log(tmdbResults);
 
       dispatch(
         addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })
