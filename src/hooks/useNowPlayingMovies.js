@@ -13,7 +13,8 @@ const useNowPlayingMovies = () => {
     const json = await data.json();
     dispatch(addNowPlayingMovies(json.results));
   };
-
+  console.log("NETLIFY TMDB KEY:", process.env.REACT_APP_TMDB_KEY);
+  console.log("API OPTIONS:", API_OPTIONS);
   useEffect(() => {
     getNowPlayingMovies();
   }, []);
