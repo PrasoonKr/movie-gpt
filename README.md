@@ -1,2 +1,2 @@
 # Features
-- will reveal later
+- A website helping users to provide movie suggestions using GeminiAi api.
