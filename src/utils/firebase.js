@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics"; // Unused, commented out to fix lint warning
 import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -14,10 +14,10 @@ const firebaseConfig = {
   storageBucket: "movie-gpt-cdd56.appspot.com",
   messagingSenderId: "196971916583",
   appId: "1:196971916583:web:aa098871549893c944cd02",
-  measurementId: "G-ZFWBJEF7HE"
+  measurementId: "G-ZFWBJEF7HE",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-export const auth=getAuth();
+initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app); // Unused, commented out to fix lint warning
+export const auth = getAuth();
